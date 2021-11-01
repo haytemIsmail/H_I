@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "8397e755-13ed-4a0c-a469-b7e02c3ae332"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project-crypto-app": {
+    "webSite-Haytem": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project-crypto-app",
+            "outputPath": "dist/webSite-Haytem",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "project-crypto-app:build:production"
+              "browserTarget": "webSite-Haytem:build:production"
             },
             "development": {
-              "browserTarget": "project-crypto-app:build:development"
+              "browserTarget": "webSite-Haytem:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "project-crypto-app:build"
+            "browserTarget": "webSite-Haytem:build"
           }
         },
         "test": {
@@ -105,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "project-crypto-app"
+  "defaultProject": "webSite-Haytem"
 }
