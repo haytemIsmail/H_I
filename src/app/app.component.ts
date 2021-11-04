@@ -7,7 +7,7 @@ import { FirebaseService } from './services/firebase.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'firebase-angular-auth';
+  title = 'webSite-Haytem';
   isSignedIn = false
   constructor(public firebaseService : FirebaseService){}
   ngOnInit(){

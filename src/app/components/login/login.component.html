@@ -1,26 +1,10 @@
-<div *ngIf="!isSignedIn" class="login">
+<div class="login">
     <h1>Login</h1>
-    <form method="post">
+    <div method="post">
         <input type="text" name="u" placeholder="email" required="required" #email/>
         <input type="password" name="p" placeholder="Password" required="required" #password/>
         <button type="submit" class="btn btn-primary btn-block btn-large"
             (click)="onSignin(email.value,password.value)">
             Accedi</button>
-    </form>
+    </div>
 </div>
-
-
-<!-- <div *ngIf="!isSignedIn">
-    <h2>Sign up</h2>
-    <input type="text" #emailSignup />
-    <input type="text" #passwordSignup />
-    <button (click)="onSignup(emailSignup.value,passwordSignup.value)">Sign up</button>
-</div>
-<hr> -->
-<!-- <div *ngIf="!isSignedIn">
-    <h2>Sign In</h2>
-    <input type="text" #email/>
-    <input type="text" #password/>
-    <button (click)="onSignin(email.value,password.value)">Sign in</button>
-  </div> -->
-<app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home>

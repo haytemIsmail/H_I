@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FirebaseService } from './services/firebase.service';
 import { LoginComponent } from './components/login/login.component';
+import { AppRoutingModule } from "./app-routing.module";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBv12IcZKKZIg-M6Mlhibw1TgX40HgRAhs",
   authDomain: "haytem-ismail.firebaseapp.com",
@@ -22,7 +24,8 @@ const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AppRoutingModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

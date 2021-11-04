@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
@@ -9,26 +10,33 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 export class LoginComponent implements OnInit {
   @Output()
   isLogout = new EventEmitter<boolean>()
-  title = 'firebase-angular-auth';
+  title = 'webSite-Haytem';
   isSignedIn = false
-  constructor(public firebaseService : FirebaseService){}
-  ngOnInit(){
-    if(localStorage.getItem('user')!== null)
-    this.isSignedIn= true
+  constructor(
+    public firebaseService: FirebaseService
+    , private router: Router) { }
+  ngOnInit() {
+    if (localStorage.getItem('user') !== null)
+      this.isSignedIn = true
     else
-    this.isSignedIn = false
+      this.isSignedIn = false
   }
-  async onSignup(email:string,password:string){
-    await this.firebaseService.signup(email,password)
-    if(this.firebaseService.isLoggedIn)
-    this.isSignedIn = true
+  async onSignup(email: string, password: string) {
+    await this.firebaseService.signup(email, password)
+    if (this.firebaseService.isLoggedIn)
+      this.isSignedIn = true;
   }
-  async onSignin(email:string,password:string){
+  /* async onSignin(email:string,password:string){
     await this.firebaseService.signin(email,password)
     if(this.firebaseService.isLoggedIn)
-    this.isSignedIn = true
-  } 
-  handleLogout(){
+    this.isSignedIn = true;
+    this.router.navigate(['/home']);
+  }  */
+  onSignin(email: string, password: string) {
+    console.log("email", email, password);
+    this.firebaseService.signin(email, password)
+  }
+  handleLogout() {
     this.isSignedIn = false
 
   }
