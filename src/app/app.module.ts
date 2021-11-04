@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {AngularFireModule} from '@angular/fire'
+import { AngularFireModule } from '@angular/fire'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FirebaseService } from './services/firebase.service';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from "./app-routing.module";
+import { HeaderComponent } from './components/header/header.component';
+import { CryptoComponent } from './components/crypto/crypto.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBv12IcZKKZIg-M6Mlhibw1TgX40HgRAhs",
@@ -20,12 +23,15 @@ const firebaseConfig = {
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    CryptoComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth'
 import { Router } from '@angular/router';
-import { from, Observable } from 'rxjs';
+import { BehaviorSubject, from, Observable, of, Subject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { isNotNullOrUndefined } from 'src/utils/fnutils';
 
@@ -9,7 +9,9 @@ import { isNotNullOrUndefined } from 'src/utils/fnutils';
   providedIn: 'root'
 })
 export class FirebaseService {
-  loggedIn$: Observable<any>;
+  loggedIn$: Observable<any> = new Observable();
+  loggedSub$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
+
   isLoggedIn = false
   constructor(public firebaseAuth: AngularFireAuth, private router: Router) { }
 
@@ -20,7 +22,8 @@ export class FirebaseService {
       .pipe(
         tap(res => {
           localStorage.setItem('user', JSON.stringify(res.user));
-          this.router.navigate(['/home'])
+          this.router.navigate(['/home']);
+          this.loggedSub$.next(res.user);
         })
       )
     this.loggedIn$.subscribe();
@@ -39,7 +42,7 @@ export class FirebaseService {
 
   }
   isloggedIn$(): Observable<boolean> {
-    return this.loggedIn$.pipe(
+    return this.loggedSub$.pipe(
       map(loggedIn => isNotNullOrUndefined(loggedIn))
     )
   }

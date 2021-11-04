@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { FirebaseService } from './services/firebase.service';
 
 @Component({
@@ -6,29 +7,13 @@ import { FirebaseService } from './services/firebase.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'webSite-Haytem';
-  isSignedIn = false
-  constructor(public firebaseService : FirebaseService){}
-  ngOnInit(){
-    if(localStorage.getItem('user')!== null)
-    this.isSignedIn= true
-    else
-    this.isSignedIn = false
+  isSignedIn$: Observable<boolean>;
+  constructor(public firebaseService: FirebaseService) { }
+  ngOnInit() {
+    this.isSignedIn$ = this.firebaseService.isloggedIn$();
   }
- /*  async onSignup(email:string,password:string){
-    await this.firebaseService.signup(email,password)
-    if(this.firebaseService.isLoggedIn)
-    this.isSignedIn = true
-  } */
-  async onSignin(email:string,password:string){
-    await this.firebaseService.signin(email,password)
-    if(this.firebaseService.isLoggedIn)
-    this.isSignedIn = true
-  }
-  handleLogout(){
-    this.isSignedIn = false
 
-  }
 
 }
