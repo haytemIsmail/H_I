@@ -39,6 +39,7 @@ export class FirebaseService {
     this.firebaseAuth.signOut();
     localStorage.removeItem('user');
     this.router.navigate(['/login']);
+    this.loggedSub$.next(null);
 
   }
   isloggedIn$(): Observable<boolean> {

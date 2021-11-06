@@ -1,13 +1,33 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Haytem-ismail</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image" href="assets/galasia.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,300&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_DfVKpLPTQnK5bxKGyz9if");
+    })();
+  </script>
+  <script>
+    var inviaMail = (param) => {
+      emailjs.send('service_m2ojrno', 'template_c80lrur', param).then(
+        _ => console.log("email Inviata Con successo", _)
+      );
+    }
+  </script>
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>

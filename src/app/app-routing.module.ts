@@ -9,7 +9,7 @@ const routes: Routes = [
 	{ path: "home", component: HomeComponent },
 	{ path: "login", component: LoginComponent },
 	{ path: "crypto", component: CryptoComponent },
-	// { path: "", redirectTo: "/", pathMatch: "full" }
+	{ path: "", redirectTo: "/", pathMatch: "full" },
 	{ path: '**', component: LoginComponent }
 ];
 

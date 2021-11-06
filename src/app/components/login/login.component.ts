@@ -1,13 +1,13 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
   @Output()
   isLogout = new EventEmitter<boolean>()
   title = 'webSite-Haytem';
@@ -15,6 +15,27 @@ export class LoginComponent implements OnInit {
   constructor(
     public firebaseService: FirebaseService
     , private router: Router) { }
+  ngAfterViewInit(): void {
+  var cta = document.querySelector(".cta");
+var check = 0;
+
+cta.addEventListener('click', function(e){
+    var text = e.target['nextElementSibling'];
+    var loginText = e.target['parentElement'];
+    text.classList.toggle('show-hide');
+    loginText.classList.toggle('expand');
+    if(check == 0)
+    {
+        cta.innerHTML = "<i class=\"fas fa-chevron-up\"></i>";
+        check++;
+    }
+    else
+    {
+        cta.innerHTML = "<i class=\"fas fa-chevron-down\"></i>";
+        check = 0;
+    }
+})
+  }
   ngOnInit() {
     if (localStorage.getItem('user') !== null)
       this.isSignedIn = true

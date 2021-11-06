@@ -11,8 +11,8 @@ cry = "ALL";
   constructor(private cryptoService: CryptoService) { }
 
   ngOnInit(): void {
-    this.cryptoService.getPriceCrypto(this.cry)
-      .subscribe(_ => console.log("price", _))
+  /*   this.cryptoService.getPriceCrypto(this.cry)
+      .subscribe(_ => console.log("price", _)) */
   }
 
 }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire'
+import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FirebaseService } from './services/firebase.service';
@@ -9,10 +10,12 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HeaderComponent } from './components/header/header.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TabellaPrezziCryptoComponent } from './components/crypto/tabella-prezzi-crypto/tabella-prezzi-crypto.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBv12IcZKKZIg-M6Mlhibw1TgX40HgRAhs",
   authDomain: "haytem-ismail.firebaseapp.com",
+  databaseURL: "https://haytem-ismail-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "haytem-ismail",
   storageBucket: "haytem-ismail.appspot.com",
   messagingSenderId: "510092631522",
@@ -25,11 +28,13 @@ const firebaseConfig = {
     HomeComponent,
     LoginComponent,
     HeaderComponent,
-    CryptoComponent
+    CryptoComponent,
+    TabellaPrezziCryptoComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     AppRoutingModule,
     HttpClientModule
   ],
