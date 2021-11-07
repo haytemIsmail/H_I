@@ -16,25 +16,23 @@ export class LoginComponent implements OnInit, AfterViewInit {
     public firebaseService: FirebaseService
     , private router: Router) { }
   ngAfterViewInit(): void {
-  var cta = document.querySelector(".cta");
-var check = 0;
+    var cta = document.querySelector(".cta");
+    var check = 0;
 
-cta.addEventListener('click', function(e){
-    var text = e.target['nextElementSibling'];
-    var loginText = e.target['parentElement'];
-    text.classList.toggle('show-hide');
-    loginText.classList.toggle('expand');
-    if(check == 0)
-    {
+    cta.addEventListener('click', function (e) {
+      var text = e.target['nextElementSibling'];
+      var loginText = e.target['parentElement'];
+      text.classList.toggle('show-hide');
+      loginText.classList.toggle('expand');
+      if (check == 0) {
         cta.innerHTML = "<i class=\"fas fa-chevron-up\"></i>";
         check++;
-    }
-    else
-    {
+      }
+      else {
         cta.innerHTML = "<i class=\"fas fa-chevron-down\"></i>";
         check = 0;
-    }
-})
+      }
+    })
   }
   ngOnInit() {
     if (localStorage.getItem('user') !== null)

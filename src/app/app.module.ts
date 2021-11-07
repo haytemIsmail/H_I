@@ -11,6 +11,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TabellaPrezziCryptoComponent } from './components/crypto/tabella-prezzi-crypto/tabella-prezzi-crypto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AcquisizioneDatiComponent } from './components/crypto/acquisizione-dati/acquisizione-dati.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBv12IcZKKZIg-M6Mlhibw1TgX40HgRAhs",
@@ -29,14 +31,16 @@ const firebaseConfig = {
     LoginComponent,
     HeaderComponent,
     CryptoComponent,
-    TabellaPrezziCryptoComponent
+    TabellaPrezziCryptoComponent,
+    AcquisizioneDatiComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

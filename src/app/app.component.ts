@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   constructor(public firebaseService: FirebaseService, public db: AngularFireDatabase) { }
   ngOnInit() {
     this.isSignedIn$ = this.firebaseService.isloggedIn$();
+    this.firebaseService.logout()
     // window['inviaMail'](this.parametri);
     // this.db.list('risorse').push(this.data);
 
