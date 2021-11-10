@@ -4,7 +4,6 @@ import { AngularFireModule } from '@angular/fire'
 import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { FirebaseService } from './services/firebase.service';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { HeaderComponent } from './components/header/header.component';
@@ -13,7 +12,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TabellaPrezziCryptoComponent } from './components/crypto/tabella-prezzi-crypto/tabella-prezzi-crypto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AcquisizioneDatiComponent } from './components/crypto/acquisizione-dati/acquisizione-dati.component';
-
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatInputModule } from '@angular/material/input';
+import { FirebaseService } from './services/fireBase/firebase.service';
 const firebaseConfig = {
   apiKey: "AIzaSyBv12IcZKKZIg-M6Mlhibw1TgX40HgRAhs",
   authDomain: "haytem-ismail.firebaseapp.com",
@@ -40,7 +41,9 @@ const firebaseConfig = {
     AngularFireDatabaseModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    MatInputModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

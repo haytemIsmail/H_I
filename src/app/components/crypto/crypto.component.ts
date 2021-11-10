@@ -7,12 +7,13 @@ import { CryptoService } from 'src/app/services/crypto.service';
   styleUrls: ['./crypto.component.scss']
 })
 export class CryptoComponent implements OnInit {
-cry = "ALL";
+  cry = "BTC";
+
   constructor(private cryptoService: CryptoService) { }
 
   ngOnInit(): void {
-  /*   this.cryptoService.getPriceCrypto(this.cry)
-      .subscribe(_ => console.log("price", _)) */
+  /*     this.cryptoService.getPriceCrypto(this.cry)
+        .subscribe(_ => console.log("price", _)) */
   }
 
 }

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { FirebaseService } from 'src/app/services/firebase.service';
+import { FirebaseService } from 'src/app/services/fireBase/firebase.service';
 
 @Component({
   selector: 'app-login',

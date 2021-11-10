@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { from, Observable, of } from 'rxjs';
-import { FirebaseService } from './services/firebase.service';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { FirebaseService } from './services/fireBase/firebase.service';
 
 @Component({
   selector: 'app-root',

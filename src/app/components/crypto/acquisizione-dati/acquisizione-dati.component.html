@@ -1,20 +1,24 @@
-<div class="wrapper">
-    <div class="login-text">
-        <button class="cta"><i class="fas fa-chevron-down fa-1x"></i></button>
-        <div class="text">
-            <h3 href="">Acquisizione dati</h3>
-            <hr>
-            <br>
-            <input type="text" placeholder="Email" #email>
-            <br>
-            <input type="password" placeholder="Password" #password>
-            <br>
-            <button class="login-btn" >Aggiungi</button>
-            <!-- <button class="signup-btn">Sign Up</button> -->
-        </div>
+<mat-accordion>
+    <div class="card border-0">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <h3 class="h4 text-capitalize mb-0">Acquisizione dati</h3>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <mat-form-field>
+                        <mat-label>Crypto</mat-label>
+                        <input matInput placeholder="Tipo crypto" formControlName="tipoCrypto">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <mat-form-field>
+                        <input matInput placeholder="importo da investire" formControlName="importoInvestito">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-expansion-panel>
     </div>
-    <div class="call-text">
-        <h1>Acquisizione dati</h1>
-    </div>
-
-</div>
+</mat-accordion>
