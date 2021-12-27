@@ -1,21 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/css/custom.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
     display: flex;
     flex-grow: 1;
     margin-right: 16;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
+
 .mat-expansion-panel-header:not([aria-disabled=true]) {
-    background: linear-gradient(to left, #ab68ca, #de67a3); 
-     transition:all 0.2s ease-out;
+    background: linear-gradient(to left, #ab68ca, #de67a3);
+    transition: all 0.2s ease-out;
 }
+
 .mat-expansion-panel {
     background: darkseagreen;
-   
-    color: rgba(0,0,0,.87);
+
+    color: rgba(0, 0, 0, .87);
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: black !important;
 }

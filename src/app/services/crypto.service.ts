@@ -10,8 +10,7 @@ export class CryptoService {
   constructor(private http: HttpClient) { }
 
   getPriceCrypto(type: string) {
-    this.urlPriceCrypto = this.urlPriceCrypto + type + '/metrics';
-    return this.http.get<any>(this.urlPriceCrypto)
-
+    let url = this.urlPriceCrypto + type + "/metrics";
+    return this.http.get<any>(url);
   }
 }

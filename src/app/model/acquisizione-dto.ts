@@ -1,4 +1,5 @@
 export class AcquisizioneDTO {
     codiceCrypto: string;
-    investimento: string;
+    investimento: number;
+    prezzo: number;
 }

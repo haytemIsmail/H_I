@@ -1,5 +1,5 @@
 <mat-accordion>
-    <div class="card border-0">
+    <div class="card border-0" [formGroup]="form">
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -7,16 +7,26 @@
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="row mt-3">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <mat-form-field>
                         <mat-label>Crypto</mat-label>
                         <input matInput placeholder="Tipo crypto" formControlName="tipoCrypto">
                     </mat-form-field>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <mat-form-field>
                         <input matInput placeholder="importo da investire" formControlName="importoInvestito">
                     </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field>
+                        <input matInput placeholder="importo da investire" formControlName="prezzo">
+                    </mat-form-field>
+                </div>
+                <div class="col-12 text-right mt-4">
+                    <button mat-flat-button color="primary" class="text-uppercase" (click)="addedCrypto()">
+                        Aggiungi
+                    </button>
                 </div>
             </div>
         </mat-expansion-panel>

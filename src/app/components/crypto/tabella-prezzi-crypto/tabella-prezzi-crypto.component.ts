@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CryptoDTO } from 'src/app/model/crypto-dto';
 
 @Component({
   selector: 'app-tabella-prezzi-crypto',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabellaPrezziCryptoComponent implements OnInit {
 
+  @Input()
+  listaCrypto: Array<CryptoDTO>;
   constructor() { }
 
   ngOnInit(): void {
+    console.log("listaCrypto", this.listaCrypto);
   }
 
 }

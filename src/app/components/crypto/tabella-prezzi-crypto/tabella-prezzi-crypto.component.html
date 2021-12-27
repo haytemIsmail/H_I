@@ -1,26 +1,29 @@
 <section class="wrapper">
-    <!-- Row title -->
-    <main class="row title">
-      <ul>
-        <li>Cryptocurrency</li>
-        <li>Prezzo</li>
-        <li><span class="title-hide">Valore medio</span></li>
-        <li>Valore richiesto</li>
-        <li>Time</li>
-      </ul>
-    </main>
-    <!-- Row 3 -->
-    <article class="row nfl">
-      <ul>
-        <li><a href="#">NHL</a></li>
-        <li>$50</li>
-        <li>12</li>
-        <li>48</li>
-        <li>12:00ET</li>
-      </ul>
-    </article>
-    <!-- Row 4 -->
-    <article class="row mlb update-row">
+  <!-- Row title -->
+  <main class="row title">
+    <ul>
+      <li>Cryptocurrency</li>
+      <li>Prezzo</li>
+      <li>investimento</li>
+      <li>Quantita</li>
+      <li><span class="title-hide">Valore medio</span></li>
+      <li>Valore richiesto</li>
+
+    </ul>
+  </main>
+  <!-- Row 3 -->
+  <article class="row nfl" *ngFor="let crypto of listaCrypto">
+    <ul>
+      <li><a href="#">{{crypto.acquisizioneDati.codiceCrypto}}</a></li>
+      <li>{{crypto.acquisizioneDati.prezzo | number :'1.2-2' }}</li>
+      <li>{{crypto.acquisizioneDati.investimento}}</li>
+      <li>{{crypto.quantita}}</li>
+      <li>{{crypto.avg | number :'1.2-2' }}</li>
+      <li>{{crypto.target | number :'1.2-2' }}</li>
+    </ul>
+  </article>
+  <!-- Row 4 -->
+  <!-- <article class="row mlb update-row">
       <ul>
         <li><a href="#">MLB</a><span class="small">(update)</span></li>
         <li>$10</li>
@@ -29,9 +32,9 @@
         <li>1:00ET</li>
       </ul>
     
-    </article>
-    <!-- Row 5 -->
-    <article class="row mlb">
+    </article> -->
+  <!-- Row 5 -->
+  <!--  <article class="row mlb">
       <ul>
         <li><a href="#">MLB</a></li>
         <li>$5</li>
@@ -40,9 +43,9 @@
         <li>12:00ET</li>
       </ul>
      
-    </article>
-    <!-- Row 6 -->
-    <article class="row nhl">
+    </article> -->
+  <!-- Row 6 -->
+  <!--  <article class="row nhl">
       <ul>
         <li><a href="#">NHL</a></li>
         <li>$50</li>
@@ -51,9 +54,9 @@
         <li>12:00ET</li>
       </ul>
     
-    </article>
-    <!-- Row 7 -->
-    <article class="row nhl">
+    </article> -->
+  <!-- Row 7 -->
+  <!--  <article class="row nhl">
       <ul>
         <li><a href="#">NHL</a></li>
         <li>$50</li>
@@ -62,5 +65,5 @@
         <li>12:00ET</li>
       </ul>
   
-    </article>
-  </section>
+    </article> -->
+</section>

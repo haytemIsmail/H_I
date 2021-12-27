@@ -1,8 +1,8 @@
 <div class="row mt-4">
     <div class="col-4">
-        <app-acquisizione-dati></app-acquisizione-dati>
+        <app-acquisizione-dati (done)="readyAcquisizione($event)"></app-acquisizione-dati>
     </div>
     <div class="col-8">
-        <app-tabella-prezzi-crypto></app-tabella-prezzi-crypto>
+        <app-tabella-prezzi-crypto [listaCrypto]="crypto$ | async"></app-tabella-prezzi-crypto>
     </div>
 </div>

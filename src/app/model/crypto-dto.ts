@@ -1,8 +1,10 @@
+import { AcquisizioneDTO } from "./acquisizione-dto";
 export class CryptoDTO {
-codiceCrypto: string;
-prezzo: number;
-investimento: number; 
-avg: number;
-target: number;
-time: Date;
+    acquisizioneDati: AcquisizioneDTO;
+    avg: number;
+    target: number;
+    time: Date;
+    quantita: number;
+    count: number;
+    quantitaTot: number
 }

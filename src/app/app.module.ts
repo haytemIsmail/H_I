@@ -15,6 +15,9 @@ import { AcquisizioneDatiComponent } from './components/crypto/acquisizione-dati
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { FirebaseService } from './services/fireBase/firebase.service';
+import { ReactiveFormsModule } from '@angular/forms';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+
 const firebaseConfig = {
   apiKey: "AIzaSyBv12IcZKKZIg-M6Mlhibw1TgX40HgRAhs",
   authDomain: "haytem-ismail.firebaseapp.com",
@@ -43,9 +46,10 @@ const firebaseConfig = {
     HttpClientModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
-  providers: [FirebaseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
