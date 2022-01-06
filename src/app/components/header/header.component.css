@@ -1,3 +1,29 @@
 .impostacolor {
     background: linear-gradient(to left, #ab68ca, #de67a3);
 }
+
+
+.header {
+    height: 50px;
+}
+
+
+/* li.nav-item.btn:hover{
+    border-width: 3px!important;
+    border-color: #e41b17 !important;
+    border-right: 0!important;
+    border-top: 0!important;
+    border-left: 0 !important;
+} */
+
+
+a.nav-link.active {
+    color: black !important;
+    }
+a.nav-link.active:focus {
+color: #e41b17 !important;
+font-size: larger !important;
+text-decoration: underline;
+}
+
+
