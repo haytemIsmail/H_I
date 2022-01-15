@@ -15,7 +15,10 @@
     border-top: 0!important;
     border-left: 0 !important;
 } */
-
+.navbar-light .navbar-toggler {
+    color: black;
+    border-color: rgba(0,0,0,.1);
+}
 
 a.nav-link.active {
     color: black !important;
@@ -25,5 +28,7 @@ color: #e41b17 !important;
 font-size: larger !important;
 text-decoration: underline;
 }
-
+.border-bottom {
+    border-bottom: 1px solid #e41b17!important;
+}
 
