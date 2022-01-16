@@ -31,4 +31,9 @@ text-decoration: underline;
 .border-bottom {
     border-bottom: 1px solid #e41b17!important;
 }
+@media (min-width: 992px){
+    .border-bottom {
+        border-bottom: 0px !important;
+    } 
+}
 
