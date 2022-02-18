@@ -31,5 +31,7 @@ export class AppComponent implements OnInit {
     // this.db.list('risorse').valueChanges().subscribe(_ => console.log("valueChange", _))
   }
 
-
+ // logout() {
+  //   this.firebaseService.logout()
+  // }
 }

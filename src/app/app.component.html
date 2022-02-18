@@ -1,3 +1,24 @@
 <!-- <app-header *ngIf="isSignedIn$ | async"></app-header>
 <router-outlet></router-outlet> -->
-<app-home></app-home>
+
+<!-- <button (click)="logout()">Logout</button> -->
+<div id="carouselHeader" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" >
+      <app-about ></app-about>
+    </div>
+    <div class="carousel-item">
+      <app-progetti></app-progetti>
+    </div>
+    <div class="carousel-item">
+      <app-skill></app-skill>
+    </div>
+    <div class="carousel-item">
+      <app-contact></app-contact>
+    </div>
+  </div>
+
+  <app-header ></app-header>
+</div>

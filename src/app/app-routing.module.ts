@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CryptoComponent } from './components/crypto/crypto.component';
+import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [

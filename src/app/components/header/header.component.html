@@ -1,79 +1,68 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-body rounded border border-top-5">
-  <div class=" w-100 header">
-   <!--  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+<!-- <nav class="navbar navbar-expand navbar-light bg-light p-3 mb-3">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-     <p> CV Haytem</p>
-    </button> -->
- <p class="d-lg-none text-center h3"> <span style="color: #e41b17;"> CV</span> Haytem</p>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-lg-5 mb-2 mb-lg-0 w-100 mt-4 mt-lg-0 d-flex justify-content-lg-center ">
-        <li class="nav-item h6 p-3 border-bottom text-center border-lg-bottom-0">
-          <a class="nav-link active" aria-current="page" href="#" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0">About me</a>
-        </li>
-        <li class="nav-item h6 p-3 border-bottom text-center border-bottom-0 ms-lg-5">
-          <a class="nav-link active" aria-current="page" href="#" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1">Progetti</a>
-        </li>
+    </button>
+  <p class="d-lg-none text-center h3"> <span style="color: #e41b17;"> CV</span> Haytem</p>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100 d-flex justify-content-around">
+      <li class="nav-item h3 p-3">
+        <a class="nav-link active" aria-current="page" href="#" data-bs-target="#carouselHeader" data-bs-slide-to="0"><i
+            class="fa-solid fa-user-graduate"></i>&nbsp; About me</a>
+      </li>
+      <li class="nav-item h3 p-3 ms-5">
+        <a class="nav-link active" aria-current="page" href="#" data-bs-target="#carouselHeader " data-bs-slide-to="1">
+          <i class="fa-solid fa-diagram-project"></i>&nbsp; Projects</a>
+      </li>
 
-        <li class="nav-item h6 p-3 border-bottom text-center border-bottom-0 ms-lg-5 p-3">
-          <a class="nav-link active" aria-current="page" href="#">Skill</a>
-        </li>
+      <li class="nav-item h3 p-3 ms-5 p-3">
+        <a class="nav-link active" aria-current="page" href="#" data-bs-target="#carouselHeader " data-bs-slide-to="2">
+          <i class="fa-solid fa-gears"></i>&nbsp; Skills</a>
+      </li>
 
-        <li class="nav-item h6 p-3 border-bottom text-center border-bottom-0 ms-lg-5">
-          <a class="nav-link active" aria-current="page" href="#">Contatto</a>
-        </li>
+      <li class="nav-item h3 p-3 ms-5">
+        <a class="nav-link active" aria-current="page" href="#" data-bs-target="#carouselHeader " data-bs-slide-to="3"><i
+            class="fa-solid fa-address-book"></i>&nbsp; Contact</a>
+      </li>
 
-      </ul>
-    </div>
+    </ul>
   </div>
+
 </nav>
-
-
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="../../assets/image/sfondo.jpg" class="d-block w-100" alt="...">
-  </div>
-  <div class="carousel-item">
-    <app-login></app-login>
-  </div>
-  <div class="carousel-item">
-    <img src="..." class="d-block w-100" alt="...">
+ -->
+<div class="main fixed-bottom">
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="#"  data-bs-target="#carouselHeader" data-bs-slide-to="0">
+          <span class="icon">
+            <i class="fa-solid fa-user-graduate"></i>
+          </span>
+          <span class="text">About me</span>
+        </a>
+      </li>
+      <li class="list">
+        <a data-bs-target="#carouselHeader" data-bs-slide-to="1">
+          <span class="icon">
+            <i class="fa-solid fa-diagram-project"></i>
+          </span>
+          <span class="text">progetti</span>
+        </a>
+      </li>
+      <li class="list">
+        <a data-bs-target="#carouselHeader" data-bs-slide-to="2">
+          <span class="icon">
+            <i class="fa-solid fa-gears"></i> </span>
+          <span class="text">skills</span>
+        </a>
+      </li>
+      <li class="list">
+        <a data-bs-target="#carouselHeader" data-bs-slide-to="3">
+          <span class="icon">
+            <i class="fa-solid fa-address-book"></i> </span>
+          <span class="text">contact</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
   </div>
 </div>
-<!-- <ul class="nav justify-content-center flex-column  flex-lg-row navbar-light bg-light h-100">
-  <li class="nav-item h6 btn h6 p-3 border-bottom ">
-    <a class="nav-link active" aria-current="page" href="#">About me</a>
-  </li>
-
-  <li class="nav-item h6"btn h6 border-bottom >
-    <a class="nav-link active" aria-current="page" href="#">Progetti</a>
-  </li>
-
-  <li class="nav-item h6 btn h6 p-3 border-bottom ">
-    <a class="nav-link active" aria-current="page" href="#">Skill</a>
-  </li>
-
-  <li class="nav-item h6"btn h6 border-bottom >
-    <a class="nav-link active" aria-current="page" href="#">Contatto</a>
-  </li>
-
-</ul> -->
-
-<!-- <ul class="nav w-50 ms-md-auto">
-  <li class="nav-item h6 btn h6 p-3 border-bottom ">
-    <a class="nav-link active" aria-current="page" href="#">About me</a>
-  </li>
-
-  <li class="nav-item h6"btn h6 border-bottom >
-    <a class="nav-link active" aria-current="page" href="#">Progetti</a>
-  </li>
-
-  <li class="nav-item h6 btn h6 p-3 border-bottom ">
-    <a class="nav-link active" aria-current="page" href="#">Skill</a>
-  </li>
-
-  <li class="nav-item h6"btn h6 border-bottom >
-    <a class="nav-link active" aria-current="page" href="#">Contatto</a>
-  </li>
-</ul> -->

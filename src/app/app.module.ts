@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire'
 import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { HeaderComponent } from './components/header/header.component';
@@ -16,6 +15,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { FirebaseService } from './services/fireBase/firebase.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './components/about/about.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { ProgettiComponent } from './components/progetti/progetti.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
 // import { MatFormFieldModule } from '@angular/material/form-field';
 
 const firebaseConfig = {
@@ -36,7 +40,11 @@ const firebaseConfig = {
     HeaderComponent,
     CryptoComponent,
     TabellaPrezziCryptoComponent,
-    AcquisizioneDatiComponent
+    AcquisizioneDatiComponent,
+    AboutComponent,
+    SkillComponent,
+    ProgettiComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
